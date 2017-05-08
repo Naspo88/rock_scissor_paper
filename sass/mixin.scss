@@ -1,0 +1,32 @@
+/* mixin functions */
+@mixin manageImg ($scaleX: 0.5, $scaleY: 0.5, $rotate: 0deg) {
+  -webkit-transform: scaleX($scaleX) scaleY($scaleY) rotate($rotate);
+  -moz-transform: scaleX($scaleX) scaleY($scaleY) rotate($rotate);
+  -ms-transform: scaleX($scaleX) scaleY($scaleY) rotate($rotate);
+  -o-transform: scaleX($scaleX) scaleY($scaleY) rotate($rotate);
+  transform: scaleX($scaleX) scaleY($scaleY) rotate($rotate); 
+}
+
+@mixin traslation ($valX: -50%, $valY: -50%) {
+	-webkit-transform: translate($valX, $valY);
+	-moz-transform: translate($valX, $valY);
+	-ms-transform: translate($valX, $valY);
+	-o-transform: translate($valX, $valY);
+	transform: translate($valX, $valY); 
+}
+
+@mixin animation ($type, $delay: 1s) {
+	-webkit-transition: $type $delay;
+	-moz-transition: $type $delay;
+	-ms-transition: $type $delay;
+	-o-transition: $type $delay;
+	transition: $type $delay;
+}
+
+@mixin nonSelectable () {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

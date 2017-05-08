@@ -1,0 +1,70 @@
+/* sprite manager */
+.hand {
+	display: inline-block;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	background: $hand_url_sprite;
+	border: $default_border;
+	margin: -25px;
+	cursor: pointer;
+	@include nonSelectable();
+
+	&.select:hover {
+		background-color: #babaff;
+	}
+
+	&.rock {
+		background-position: -175px 15px;
+
+		&.select {
+			@include manageImg($rotate: 90deg);
+		}
+
+		&.mine {
+			@include manageImg($scaleX: 0.75, $scaleY: -0.75, $rotate: 180deg);
+			border: none;
+		}
+
+		&.cpu {
+			@include manageImg($scaleX: 0.75, $scaleY: 0.75, $rotate: 0deg);
+			border: none;
+		}
+	}
+
+	&.paper {
+		background-position: -175px -169px;
+
+		&.select {
+			@include manageImg($rotate: 90deg);
+		}
+
+		&.mine {
+			@include manageImg($scaleX: 0.75, $scaleY: -0.75, $rotate: 180deg);
+			border: none;
+		}
+
+		&.cpu {
+			@include manageImg($scaleX: 0.75, $scaleY: 0.75, $rotate: 0deg);
+			border: none;
+		}
+	}
+
+	&.scissor {
+		background-position: -175px -355px;
+
+		&.select {
+			@include manageImg($rotate: 270deg);
+		}
+
+		&.mine {
+			@include manageImg($scaleX: 0.75, $scaleY: 0.75, $rotate: 0deg);
+			border: none;
+		}
+
+		&.cpu {
+			@include manageImg($scaleX: 0.75, $scaleY: -0.75, $rotate: 180deg);
+			border: none;
+		}
+	}
+}
