@@ -51,6 +51,9 @@
 			</div>
 			
 			<div class="container-fluid choice">
+				<span class="hand rock select" ng-click="ctrl.play('rock')"></span>
+				<span class="hand scissor select" ng-click="ctrl.play('scissor')"></span>
+				<span class="hand paper select" ng-click="ctrl.play('paper')"></span>
 			</div>
 
 			<div ng-class="ctrl.endGame" class="overlay">
