@@ -1,0 +1,33 @@
+{
+  "name": "rock_scissor_paper",
+  "version": "1.0.0",
+  "description": "Tech test",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naspo88/rock_scissor_paper.git"
+  },
+  "keywords": [
+    "rock",
+    "scissor",
+    "paper",
+    "ovo_energy"
+  ],
+  "author": "Roberto Minghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naspo88/rock_scissor_paper/issues"
+  },
+  "homepage": "https://github.com/Naspo88/rock_scissor_paper#readme",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1"
+  }
+}
