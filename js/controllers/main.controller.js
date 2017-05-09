@@ -10,11 +10,9 @@ function MainController ($scope) {
 		    return Math.floor(Math.random() * (max - min) + min);
 		},
 		alertMsg = function (msg, callback) {
-			var fix = $(".alertMsg");
-			fix.html(msg);
-			fix.addClass("show");
+			vm.alert = "show";
 			setTimeout(function(){
-				fix.removeClass("show");
+				vm.alert = "";
 				callback();
 			}, 1500);
 		};
@@ -37,12 +35,13 @@ function MainController ($scope) {
 		cpu: 0
 	};
 	vm.endGame = "";
+	vm.alert = "";
 
 	// Bindable functions
 	vm.play = play;
 	vm.resetGame = resetGame;
 
-	// Function that make the choice for the computer and declare who win the match
+	// Function that makes the choice for the computer and declares who win the match
 	function play (choice) {
 		if (!wait) {
 			vm.choice.user = choice;
@@ -87,7 +86,7 @@ function MainController ($scope) {
 		}
 	};
 
-	//Function that reset the game at the end of it
+	//Function that resets the game at the end of it
 	function resetGame () {
 		vm.points.user = 0;
 		vm.points.cpu = 0;
