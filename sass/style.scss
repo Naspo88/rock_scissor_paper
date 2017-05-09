@@ -116,6 +116,7 @@ header {
     	p {
     		font-size: 26px;
     		display: inline-block;
+    		margin: $default_margin $default_margin*2;
 
     		&.float {
     			float: right;

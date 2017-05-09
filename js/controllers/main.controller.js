@@ -11,6 +11,7 @@ function MainController ($scope) {
 		},
 		alertMsg = function (msg, callback) {
 			vm.alert = "show";
+			vm.alertTxt = msg;
 			setTimeout(function(){
 				vm.alert = "";
 				callback();
@@ -55,9 +56,9 @@ function MainController ($scope) {
 					checkVictory();
 				},
 				checkVictory = function () {
-					if (vm.points.user == winsPoints || vm.points.cpu == winsPoints) {
+					if (vm.points.user === winsPoints || vm.points.cpu === winsPoints) {
 						vm.endGame = "show";
-						vm.winner = (vm.points.user == winsPoints) ? "you win!" : "you lose!"
+						vm.winner = (vm.points.user === winsPoints) ? "you win!" : "you lose!"
 					}
 
 					$scope.$apply();
@@ -66,12 +67,12 @@ function MainController ($scope) {
 
 			vm.choice.cpu = poss[rand];
 
-			if (vm.choice.user == vm.choice.cpu) {
+			if (vm.choice.user === vm.choice.cpu) {
 				alertMsg("tie", function () {
 					resetMatch();
 				});
 			} else {
-				if (hands[vm.choice.user] == vm.choice.cpu) {
+				if (hands[vm.choice.user] === vm.choice.cpu) {
 					vm.points.user = vm.points.user + 1;
 					alertMsg("player win", function () {
 						resetMatch();
